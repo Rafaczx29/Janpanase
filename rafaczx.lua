@@ -7,7 +7,7 @@
 ]]
 
 -- UBAH INI SESUAI KEINGINANMU
-local Author = "Rafaczx"
+local Author = "AUTO SUMMIT"
 
 -- CFRAME SUMMIT
 local TARANJANG_CFRAME = CFrame.new(8711.95215, 1637.02124, 1343.46667, 0.375418901, -4.74302198e-09, 0.926855266, 1.80503723e-10, 1, 5.04421527e-09, -0.926855266, -1.72639292e-09, 0.375418901)
@@ -44,7 +44,7 @@ local function executeCycle(summitCFrame, delay)
     local success = pcall(function()
         
         -- Ambil karakter yang SAAT INI ada
-        local char = player.Character or player.CharacterAdded:Wait(5)
+        local char = player.Character or player.CharacterAdded:Wait(3)
         if not char then return end 
 
         local root = char:WaitForChild("HumanoidRootPart", 5)
@@ -83,7 +83,7 @@ local function executeCycle(summitCFrame, delay)
     if not success then
         -- Jika ada error, beri jeda untuk mencegah crash total
         task.wait(2)
-        StellarLibrary:Notify("Error selama siklus!", 2)
+        StellarLibrary:Notify("RUNNING SCRIPT", 2)
     end
     return success
 end
@@ -168,7 +168,7 @@ local Window = StellarLibrary:Window({
 -- TAB LAMA
 local TaranjangTab = Window:Tab("Mount Taranjang", "rbxassetid://10723407389")
 -- TAB BARU
-local JapaneseTab = Window:Tab("Mount Japanese", "rbxassetid://16167664817") -- Menggunakan ikon gunung yang berbeda
+local JapaneseTab = Window:Tab("Mount Japanese", "rbxassetid://10723407389")
 
 
 -- 4. MENAMBAHKAN KONTROL AUTO SUMMIT KE TAB TARANJANG

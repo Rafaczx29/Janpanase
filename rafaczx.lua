@@ -35,7 +35,7 @@ local function executeCycle(delay)
     local success = pcall(function()
         
         -- Ambil karakter yang SAAT INI ada (karakter yang baru respawn dari loop sebelumnya)
-        local char = player.Character or player.CharacterAdded:Wait(5)
+        local char = player.Character or player.CharacterAdded:Wait(3)
         if not char then return end 
 
         local root = char:WaitForChild("HumanoidRootPart", 5)
@@ -50,7 +50,7 @@ local function executeCycle(delay)
         root.CFrame = SUMMIT_CFRAME
         
         -- ** JEDA 2 DETIK SETELAH TELEPORT (SESUAI PERMINTAAN USER) **
-        task.wait(5) 
+        task.wait(3) 
         
         -----------------------------------
         -- 2. RESET/KILL KARAKTER
@@ -163,4 +163,5 @@ end);
 -- TOMBOL STOP
 SummitTab:Button("STOP AUTO LOOP", function()
     stopTeleportLoop();
+
 end);
